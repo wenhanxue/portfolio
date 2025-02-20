@@ -30,6 +30,9 @@ nav {
     border-bottom-style: solid;
     border-bottom-color: oklch(80% 3% 200);
     text-align: center;
+
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
 }
 
 nav a {
@@ -45,16 +48,18 @@ nav a {
 
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
-    background-color: oklch(from var(--color-accent) 95% 5% h)
+    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+
 }
 
-/*form input, form textarea, form button{
+form input, form textarea, form button, select {
     font: inherit;
     display: block;
     width: 100%;
     box-sizing: border-box;
     margin-block: 0.4em;
-}*/
+}
 
 form {
     display: grid;
@@ -161,4 +166,21 @@ h1, h2, h3, h4, h5, h6 {
 
 #firstSectionCV {
     padding-bottom: 1.05em;
+}
+
+html {
+    color-scheme: dark;
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    gap: 4px;
+}
+
+select {
+    margin-bottom: 0.7em;
+    margin-top: 0.25em;
 }

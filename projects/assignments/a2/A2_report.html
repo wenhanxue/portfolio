@@ -3,6 +3,7 @@
 <head>
 	<title>Vis & Society Assignment 2</title>
 	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -21,153 +22,379 @@
 			<h2>Subtheme: Corporate Landlords & Evictions</h2>
 
 			<h3>Motivation</h3>
-			<p>In lecture, Professor D'Ignazio mentioned the absence of eviction data despite political demands ever since 2016.
-				I believe such absence exactly shows that more investigation and attention are needed for this topic. According to
-				<a href="https://www.homesforallmass.org/covid-evictions-report/hfamass-covid-evictions-report-short-03-22-screen-rfs.pdf">eviction report by Homes for All MA</a>, 
-				the COVID-19 pandemic exacerbated eviction filing rates in Massachusetts, a lot of which
-				intentionally targeted towards marginalized populations like Black, Latinx and single mothers. Homes for All MA also highlighted
-				that corporate and abseentee property owners are more likely to file evictions. The dataset that I am analyzing enatils the change 
-				in corporate ownership and owner occupancy rates from 2004 - 20204 in Boston neighborhoods, as well as the demographic information of each neighborhood.
-				Although lacking on specific eviction filing data in the Boston area, I hope that through this dataset I can learn about which neighborhoods
-				have higher rates of corporate ownership, and which demographics are most severely impacted as a result. Since there is no eviction data available 
-				for this assignment, I am looking for migration patterns of underrepresented communities, which might be results of eviction filings in the area.
-				Lastly, Homes for All MA also mentioned in the report that "Black, Brown, and Indigenous renters are more likely to be evicted than white renters."
-				I am interested in the situation of Asian Americans and Pacific Islanders on this matter, given that this is a very diverse population with varying socioeconomic
-				backgrounds.
+			<p>In lecture, Professor D'Ignazio highlighted the absence of eviction data despite ongoing political demands since 2016. This absence underscores the need for further investigation and attention to this critical issue.
+				According to
+				<a href="https://www.homesforallmass.org/covid-evictions-report/hfamass-covid-evictions-report-short-03-22-screen-rfs.pdf">a report by Homes for All MA</a>, 
+				the COVID-19 pandemic exacerbated eviction filing rates in Massachusetts, with many filings intentionally targeting marginalized populations, including Black and Latinx communities, as well as single mothers. 
+				The report also emphasized that corporate and absentee property owners are more likely to file evictions. The dataset I am analyzing includes changes in corporate ownership and owner-occupancy rates from 2004 
+				to 2024 across Boston neighborhoods, along with detailed demographic information for each neighborhood. While the dataset does not include specific eviction filing data for Boston, it provides an opportunity to 
+				explore which neighborhoods have higher rates of corporate ownership and which demographic groups are most affected. <s>In the absence of eviction data, I aim to examine changes in the racial and ethnic makeup of neighborhoods over time, which may indirectly reflect the consequences of eviction filings and housing instability.</s>
+				Additionally, the Homes for All MA report noted that "Black, Brown, and Indigenous renters are more likely to be evicted than white renters." 
+				This raises the question of where Asian Americans and Pacific Islanders (AAPI) stand in this issue, particularly given the diversity in socioeconomic background within this population.
 			</p>
 
 			<h3>Overall Analysis Questions</h3>
 			<ol>
-				<li>How has corporate ownership rate in Boston changed over time?</li>
-				<li>Which neighborhoods are most impacted by corporate ownership and who lives there?</li>
+				<li>How has the corporate ownership rate in Boston changed over time?</li>
+				<li>Which neighborhoods are most impacted by corporate ownership, and who lives there?</li>
 				<li>How do corporate ownership trends compare to owner occupancy trends between 2004 and 2024?</li>
-				<li>Where do Asian Americans and Pacific Islanders (AAPI) lie in this problem?</li>
+				<li><i>EXTRA: </i>Where do Asian Americans and Pacific Islanders (AAPI) lie in this problem?</li>
 			</ol>
 		</section>
 
 		<section>
 			<h2>Discoveries & Insights</h2>
-			<p>To tackle my first guiding question as well as to gain familiarity with the dataset, I started off with a line chart looking at
-				how corporate ownership rate has changed from 2004 to 2024 in different neighborhoods in Boston. 
+			<p>
+				I began my exploratory analysis by plotting single variables to familiarize myself with the dataset and identify any potential data quality issues.
+			</p>
+			<figure>
+				<img src="graphs/6.png" alt="" />
+				<figcaption>
+					This line chart shows the trend of total population in each Boston neighborhood from 2004 to 2024.
+				</figcaption>
+			</figure>
+			<p>
+				I observed that the trends for all neighborhoods are horizontal, indicating no change in total population from 2004 to 2024. 
+				This seemed impossible, so I revisited the dataset and noticed that the numbers for total population--as well as other population categories--remained constant across all years. 
+				This issue was later clarified in the class Slack channel that census data is collected once every 10 years, and only the 2020 census data is included in this dataset. 
+				While this is not a data quality issue, it is an important limitation to keep in mind as the analysis progresses. This discovery also prompted me to remove (<s>crossed out</s> in the Motivation section) and revise questions related to population trends, 
+				as the data does not support longitudinal analysis of demographic changes.
+			</p>
+
+			<p>Now, to address my first overall analysis question, I created a line chart to examine
+				how corporate ownership rates have changed from 2004 to 2024 across Boston neighborhoods. 
 			</p>
 
 			<figure>
 				<img src="graphs/1.png" alt="" />
 				<figcaption>
-				This line chart shows trends of corporate ownership from 2004 to 2024 in each of the Boston neighborhoods.
-				*To avoid the graphs from being too long, I decided to put all lines in the same graph. However, because Tableau doesn't allow for text labels at the end of a line, the expressiveness and effectiveness
-				of this chart is compromised. You can find a more detailed line chart with more spaced out lines <a href="graphs/2.png">here</a>.
+				This line chart shows trends of corporate ownership from 2004 to 2024 for Boston neighborhoods.<br/><i><small>*To avoid displaying an excessively long graph, all lines are plotted together in this format. 
+				However, because Tableau does not allow text labels at the end of lines, the chart's clarity is somewhat compromised. A more detailed version of this chart with more better-spaced lines can be found <a href="graphs/2.png">here</a>.</small></i>
 				</figcaption>
 			</figure>
-			<p>We can immediately see that the overall trend for corporate ownership across all neighborhoods is an increase. Additionally, there are a couple different interesting things in this chart:</p>
+			<p> This chart reveals several key insights:</p>
 			<ol>
-				<li>The five neighborhoods with the highest corporate ownership rates (in reds and oranges) seem to be predominantly white neighborhoods</li>
-				<li>The five neighborhoods with the lowerst corporate ownership rates (in greens and blues) seem to predominantly have residents of color</li>
-				<li>East Boston and Charleston neighborhoods (in purple) both displays a drastic increase in corporate ownership rate between 2023 and 2024</li>
-				<li>South Boston Waterfront neighborhood shows dramatically fluctuates in corporate owernship rate throughout the 20 years.</li>
-				<li>We see a steeper increase in corporate ownership starting in 2019 for most neighborhoods.</li>
+				<li>Corporate ownership rates have increased across all neighborhoods over the 20-year period.</li>
+				<li>The five neighborhoods with the highest corporate ownership rates (shown in red and orange) seem to be predominantly white neighborhoods</li>
+				<li>The five neighborhoods with the lowerst corporate ownership rates (shown in green and blue) seem predominantly populated by residents of color</li>
+				<li>East Boston and Charleston neighborhoods (shown in purple) both exhibit a sharp rise in corporate ownership rates between 2023 and 2024</li>
+				<li>The South Boston Waterfront neighborhood shows dramatic fluctuations in corporate owernship rates throughout the 20-year period.</li>
+				<li>Most neighborhoods experienced a steeper increase in corporate ownership rates starting in 2019.</li>
 			</ol>
-			<p>Let's dive deeper into these findings one by one. First of all, I have to check and verify the demographics of these neighborhoods that stood out.
+			<p>These findings raised several questions that worth further investigation. Let's dive deeper into them one by one. 
+				First of all, I need to verify the demographic profiles of the neighborhoods that stood out to better understand the relationship between corporate ownership and racial composition.
 			</p>
 
 			<figure>
 				<img src="graphs/3.png" alt="" />
 				<figcaption>
-					This stacked bar graph reflects the racial and ethnical distribution of each Boston neighborhood, ranking in descending order
-					of total number of Black, Hispanic and Indigenous residents in the neighborhood.
+					This stacked bar graph reflects the racial and ethnical distribution (excluding individuals identified as "Other" race or with two or more races) of each Boston neighborhood, ranked in descending order
+					by the total number of Black, Hispanic and Indigenous residents.
 				</figcaption>
 			</figure>
-			<p>According to Homes for All MA's report, Black, Hispanic and Indigenous renters face severe discrimination when it comes to housing. This is supported by MAPC's Homes for Profit report,
-				which indicated that investors tend to invest in areas with highest share of Black, Indigenous and People of Color (BIPOC) populations, thereby increasing
-				the housing cost in those areas even more. Since we are most interested in the impact on all BIPOC residents, their
-				portions of the bar are represented in different shades of pink. It is still unclear where Asian Americans and Pacific Islanders lie in this problem, as this wasn't mentioned in either report, so I 
-				choose gray for their portion of the bar as they are unrelated to the current question we are investigating.
+			<p>
+				The percentages are calculated by dividing the total population of each racial/ethnic group by the total population of the neighborhood. Individuals who identified as "Other" race or with two or more races were excluded from the calculation, as it
+				is difficult to determine whether they belong to marginalized communities. Since only the 2020 census data is available, the analysis does not include or reflect longitudinal changes in population composition.
 			</p>
-			<p>One interesting observation we can make about this stacked bar graph is how little indigenous people takes up the total population of most neighborhoods.</p>
-			<img src="graphs/4.png" alt="" />
-			<p>They are actually on this graph, in case you don't notice them. Let's zoom in on the indigenous populations to see better.</p>
+			<p>According to the Homes for All MA report, Black, Hispanic and Indigenous renters face significicant housing discrimination. This finding is supported by <a href="https://homesforprofit.mapc.org/report">MAPC's <i>Homes for Profit</i> report</a>,
+				which indicates that investors tend to target areas with the highest shares of Black, Indigenous and People of Color (BIPOC) populations, further driving up
+				housing costs in those areas. To highlight the impact on BIPOC residents, as this is one of our primary interests in this exploratory analysis, their
+				proportions of the bar are represented in varying shades of pink. The situation of AAPI in this context remains unclear, as this population is not explicitly addressed in Homes for All MA's eviction report.
+				For this reason, their portion of the bar is shown in gray, as they are not directly relevant to the current question we are investigating. We will come back to them in <em>Q4</em>.
+			</p>
+			<p>One interesting observation we can make about this stacked bar graph is the small proportion of Indigenous individuals in most neighborhoods.</p>
+			
+			<img style="max-width: 80%; border: 0.2em solid oklch(80% 3% 200);" src="graphs/4.png" alt="" />
+			
+			<p><i><small>Just highlighting their portions in Figure 3. in dark red, since they might be too slim to notice. Let's zoom in on the Indigenous population.</small></i></p>
 
 			<figure>
 				<img src="graphs/5.png" alt="" />
 				<figcaption>
-				This bar graph shows the percentages of American Indian and Alaska Native (indigenous) individuals in each Boston neighborhood, ranking from
-				highest to lowerst percentage.
+				This bar graph shows the percentage of American Indian and Alaska Native (Indigenous) individuals in each Boston neighborhood, ranking from
+				highest to lowest percentage.
 				</figcaption>
 			</figure>
 
 			<p>
-				Looking at this graph, my observations from the previous graph are verified- the top five neighborhoods with the highest corporate ownership rates are predominantly white neighborhoods,
-				with the highest distribution of 89.25% and lowest of 54.32%. On the other hand, although only the two neighborhoods with the lowest corporate ownership rates are predominantly BIPOC (90.92% in Mattapan and 73.82% in Hyde Park),
-				all bottom five neighborhoods ranked higher in distribution of BIPOC residents than over 50% of the Boston neighborhoods. We can conclude from these
-				demographics that there might be an inverse relationship between number of BIPOC residents and the corporate ownership rate of a neighborhood. This is rather surprising, as we should be expecting the exact
-				opposite based on Homes for All MA's and MAPC's reports. One possible explanation for this completely reversed correlation is that MAPC analyzed not only corporate but also individual investors, whose footprint is not
-				captured in our dataset.
-			</p>
-			<p> The demographic information also does not give us any guidance on the trends of corporate ownership in East Boston, Charleston and South Boston Waterfront, nor explains
-				the overall steeper increase in 2019. 
+				Even in the neighborhood with highest percentage of Indigenous residents (Dorchester, at 6.26%), their representation is minimal. In predominantly
+				white neighborhoods like Beacon Hill, the percentage drops as low as 0.24%. This low representation may reflect historical and systemtic factors of displacing and marginalizing Indigenous communities in these regions.
+				Given their limited presence, it is also likely that their experiences and needs are overlooked in discussions on housing instability, despite their vulnerability to displacement and eviction as part of the BIPOC community.
 			</p>
 
+			<p>
+				Returning to observations from Figure 2., the top five neighborhoods with the highest corporate ownership rates are predominantly white,
+				with white distribution ranging from 54.32% to 89.25%. In contrast, although only two of the bottom five neighborhoods (attapan and Hyde Park)
+				are predominantly BIPOC (90.92% and 73.82%, respectively), all five neighborhoods rank higher in BIPOC representation than over 50% of the Boston neighborhoods. 
+				This suggests an inverse relationship between the proportion of BIPOC residents and corporate ownership rate of a neighborhood. This is a rather surprising finding, as we should be expecting the exact
+				opposite based on Homes for All MA's and MAPC's reports. One possible explanation for this reversed correlation is that the MAPC report includes both corporate and individual investors, while our dataset while captures
+				corporate ownership, which does not incorporate the full extent of investor activity.
+			</p>
+
+			<p>
+				The demographic data does not provide clear explanations for the sharp increases in corporate ownership in East Boston, Charleston and South Boston Waterfront, nor does it account for
+				the overall steeper rise starting in 2019. Exploring <em>Q3. How do corporate ownership trends compare to owner occupancy trends between 2004 and 2024?</em> may get more
+				promising insights. 
+			</p>
+
+			<p>
+				But before that, let's delve deeper into <em>Q2</em> by analyzing the demographics of neighborhoods with the highest corporate rates more comprehensively. In addition to BIPOC populations, we should look for other underrepresented and vulnerable groups, such as individuals living in institutional 
+				group quarters (e.g., nursing facilities, juveniles) and non-institutional group quarters (e.g., homeless shelters). While familes with children are also vulnerable to
+				housing instability, this dataset doesn't contain the number of families with children, only the number of individuals under 18. Since it is vague how many children belong to each household, this might result in overcounting, so we will exclude this population from the analysis.
+				We will also exclude military personnel and college students from population living in group quarters, as they are typically housed in assigned dorms and are less likely to be affected by corporate owernship or housing instability.
+			</p>
+
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="graphs/7.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This bar graph shows the percentage of population living in group quarters (excluding military and college students) in Boston neighborhoods with the highest and lowest corporate owernship rates, ranked in descending order based on population percentage.
+				Neighborhoods with highest corporate owernship rates are shown in red while those with the lowest are shown in green.
+				</figcaption>
+			</figure>
+
+			<p>
+				Except for Downtown, neighborhoods with the lowest corporate owernship rates tend to have higher percentage of their population living in group quarters. In contrast, neighborhoods like
+				South Boston Waterfront and Longwood, which have the first and third highest corporate owernship rates respectively, have almost no residents living in group quarters. This might suggest that corporate investors
+				may avoid investing in areas with institutional facilities, possibly due to lower profitability. Additionally, neighborhoods with higher proportions of residents in group quarters are predominantly BIPOC communities. This raises the question of 
+				whether corporate investors are buying non-institutional residential properties in these areas, driving up housing prices which forces marginalized communities to move to neighborhoods with lower corporate owernship rates.
+				To explore this further, we examine the distribution of different types of group quarter populations in the neighborhoods with the highest and lowest corporate ownership rates.
+			</p>
+
+			<figure>
+				<img src="graphs/8.png" alt="" />
+				<figcaption>
+				This stacked bar graph shows the percentage of different types of group quarter populations in neighborhoods with the highest and lowest corporate ownership rates. The bars are splitted into two groups--neighborhoods with the highest and lowest corporate rates--and ranked from highest to lowest percentage of
+				residents living in non-institutional group quarters like homeless shelter. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Consistent with our earlier observations, neighborhoods with low corporate ownership rates have significantly higher percentages of residents living in insitutional facilities compared to neighborhoods with high corporate ownership rates, with Fenway being the only exception. This further support our hypothesis that 
+				corporate investors tend to avoid regions with institutional facilities such as nursing homes, correctional facilities, and juveniles.
+				Additionally, most high corporate ownership neighborhoods have homeless shelter residents making up over 80% of their group quarter population, with South Boston Waterfront have 100% of its group quarter population in homeless shelters.
+				This pattern indicates that corporate ownership may contribute to housing instability, potentially leading to unaffordable rents or evictions that forced residents into shelters. Fenway, however, again remains as an outlier, as it has relatively high proportion of institutional group quarter residents despite its high corporate ownership rate. We should look more into this exception in Q3.
+			</p>
+
+			<p>
+				But before then, let's continue our exploration of group quarter populations. To better understand the broader context, we compare the percentage of homeless shelters residents across Boston neighborhoods.
+			</p>
+
+			<figure>
+				<img src="graphs/9.png" alt="" />
+				<figcaption>
+				This bar graph shows the percentage of the population living in homeless shelters across Boston neighborhoods, ranked from highest to lowest percentage. Top 10 neighborhoods with the highest corporate ownership rates are highlighted in red,
+				while the bottom 11 are highlighted in green.
+				</figcaption>
+			</figure>
+
+			<p>
+				Downtown ranks first among all Boston neighborhoods in terms of homeless shelter residents, aligning with our earlier finding. However, there is no clear overall pattern betweem corporate owernship rates and 
+				percentage of homeless shelter residents in other neighborhoods. This lack of a clear trend might point to factors beyond corporate ownership, such as difference in social service access or historical housing policies, playing roles in homelessness rate, which our dataset is not able to address. 
+			</p>
+
+			<p>
+				South Boston Waterfront and Longwood, which are predominantly white neighborhoods, rank last in terms of homeless shelter residents. It is possible that these neighborhoods
+				have more resources to prevent homelessness or alternative housing solutions, due to their relative wealth or racial priviledge. Another explanation might be that corporate investment
+				in these areas is concentrated in high-end developments catered to wealthier residents, leaving little to no room for shelters or more affordable housing.
+			</p>
+
+			<p>
+				Now, let's deepen our understanding on corporate investors' activities and strategies by trying to answer <em>Q3. How do corporate ownership trends compare to owner occupancy trends between 2004 and 2024?</em>
+				Before proceeding, here is a quick reminder of the unresolved observations from earlier visualizations that hopefully may be clarified by exploring this question:
+			</p>
+			<ol>
+				<li>
+					The inverse relationship between neighborhoods' corporate ownership rates and BIPOC populations, which contradict the findings from the Homes for All MA report
+				</li>
+				<li>
+					Unusual fluctuations in corporate ownership trends in East Boston, Charleston and South Boston Waterfront
+				</li>
+				<li>
+					The overall steep increase in corporate ownership rates across most Boston neighborhoods starting in 2019
+				</li>
+				<li>
+					Fenway as an outlier with higher percentage of institutional facility residents and a lower percentage of homeless shelter residents compared to other high corporate ownership neighborhoods
+				</li>
+			</ol>
+
+			<figure>
+				<img src="graphs/10.png" alt="" />
+				<figcaption>
+				This line chart shows trends in corporate ownership rates (green) and owner occupancy rates (orange) across Boston from 2004 to 2024. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Consistent with earlier observations, the chart reveals a sharp increase in corporate ownership rates overall starting in 2019. Notably, the rate of increase in corporate ownership
+				is significantly faster than the rate at which owner occupacy declines. This implies that despite the rapid growth in corporate ownership, many residents continue to have a stable housing, either 
+				because they already owned their homes or can still afford rents (that very likely rises due to growing corporate ownership). However, this does not account for housing instability among renters in high
+				corporate ownership neighborhoods. How are owner occupancy rates impacted by (and mutually impacting) corporate ownership rates among neighborhoods with extremely high and low corporate ownership rates?
+			</p>
+
+			<p>
+				To better understand these dynamics, let's examine the trends in the top and bottom five neighborhoods with highest and lowest corporate ownership rates.
+			</p>
+
+			<figure>
+				<img src="graphs/11.png" alt="" />
+				<figcaption>
+				This line graph shows the trends of corporate ownership rates (green) and owner occupancy rates (orange) from 2004 to 2024 in Boston's top and bottom five neighborhoods with highest and lowest corporate ownership rates.
+				The first five neighborhoods have the highest corporate ownership rates, while the last five have the lowest, with each group ranked from highest to lowest within their category.
+				</figcaption>
+			</figure>
+
+			<p>
+				In neighborhoods with the lowest corporate ownership rates, owner occupancy rates constantly remained high since 2004, with only slight decreases over the 20-year period.
+				This suggests that many residents in these neighborhoods already owned their homes in 2004, leaving little room for corporate investors to step in. As a result, these neighborhoods experienced minimal increase in corporate ownership rates.
+			</p>
+
+			<p>
+				On the other hand, neighborhoods with the highest corporate ownership rates started with significantly lower owner occupancy rates in 2004, which potentially made them attractive to corporate investors. Over time, these neighborhoods had much more dramatic increases in corporate ownership and corresponding declines in owner occupancy. 
+				It is very likely that corporate investors have been purchasing properties and turning them into rental units.
+			</p>
+
+			<p>
+				These findings help explain two of our unresolved observations: 
+			</p>
+			<ol>
+				<li>
+					The extremely low corporate ownership rates in certain neighborhoods can be attributed to
+					their extremely high owner occupancy rates, which limited opportunities for corporate investment
+				</li>
+				<li>
+					The discrepancy with Homes for All MA's report may be due to the fact that the report was based on eviction filing rates, which are less relevant in neighborhoods where most residents already owned their homes.
+					Instead, BIPOC renters in high corporate ownership neighborhoods are likely to face more housing instability and threats of eviction filing. It is also worth mentioning that Homes for All MA"s analysis was based on data between 2020 and 2021,
+					and housing policy or market changes may have happened after this period that influenced housing dynamics.
+				</li>
+			</ol>
+
+			<p>
+				The dramatic fluctuations in corporate ownership rates in South Boston Waterfront can also be partially explained. Between 2011 and 2014, this neighborhood experienced an obvious decrease in corporate ownership rates that gradually recovered between 2015 and 2019.  
+				These fluctuations are nearly symmetrical in owner occupancy rates between 2010 and 2019. This may reflect some temporary drops in housing prices in that neighborhood, and later implementation of policies
+				that promote homeownership. Additionally, there is a sharp increase in owner occupancy rate in 2009, which could be connected to efforts to restore economy in Boston post Great Depression.
+			</p>
+
+			<p>
+				To further explore these trends, we examine the relationship between corporate ownership rates and vacancy unit rates using 2020 census data. The vacancy unit rate is calculated by dividing number of vacant units in a neighborhood by its total number of units.
+			</p>
+
+			<figure>
+				<img src="graphs/12.png" alt="" />
+				<figcaption>
+				This bar graph shows corporate ownership rates (green) and vacancy unit rates (orange) in the 10 Boston neighborhoods with the highest corporate ownership rate in 2020. Neighborhoods are ranked from highest to lowest corporate ownership rate.
+				</figcaption>
+			</figure>
+
+			<p>
+				Interestingly, despite high corporate ownership rates, vacancy unit rates are relatively low. This suggests that most residents in these neighborhoods either own their homes or can afford their rents. 
+				Tieing this back to our earlier observation about Fenway, which has exceptionally low percentage of homeless shelter residents, it might be explained by its extremely low vacancy unit rate indicating that most residents have relatively stable housing.
+				However, South Boston Waterfront, Downtown and West End stood out with significantly higher vacancy unit rates than the rest. Does this suggest that they have lower owner occupancy rates as well? Let's include them in our analysis.
+			</p>
+
+			<figure>
+				<img src="graphs/13.png" alt="" />
+				<figcaption>
+				This bar graph shows corporate ownership rates (green), vacancy unit rates (orange) and owner occupancy rates (blue) in the 10 Boston neighborhoods with highest corporate ownership rates in 2020. Neighborhoods are ranked from highest to lowest corporate ownership rate.
+				</figcaption>
+			</figure>
+
+			<p>
+				Contrary to our expectation, South Boston Waterfront, Downtown, and West End have relatively high owner occupancy rates despite their high vacancy unit rates. This could indicate that housing prices are higher in these neighborhoods, making many units less affordable to the general public.
+				We also see that Fenway's owner occupancy rate is lower than all the other neighborhoods, implying that most of its residents are renters. While this does not fully explain Fenway as an outlier in group quarter population, it provides additional context
+				about its unique housing characteristic. 
+			</p>
+
+			<p>
+				Despite these insights, several ones remain unresolved:
+			</p>
+			<ol>
+				<li>
+					The sharp increase in corporate ownership rates in 2023 in East Boston and Charleston
+				</li>
+				<li>
+					The overall steep increase in corporate ownership rate across Boston neighborhoods starting in 2019
+				</li>
+				<li>
+					Fenway's higher percentage of institutional facility residents and lower percentage of homeless shelter residents compared to other high corporate ownership neighborhoods
+				</li>
+			</ol>
+
+			<p>
+				Our visual analysis did not lead to clear answers to these questions, suggesting that additional data or context may be needed to fully explain these trends.  
+			</p>
+
+			<p>
+				Lastly, let's take a look at the housing situations for Asian Americans and Pacific Islanders in Boston. To begin, we identify the neighborhoods with the largest AAPI populations to narrow our focus.
+			</p>
+
+			<figure>
+				<img src="graphs/14.png" alt="" />
+				<figcaption>
+				This stacked bar graph shows the percentage of Asian Americans and Pacific Islanders (AAPI) population across Boston neighborhoods, highlighted in red. Neighborhoods are sorted from highest to lowest percentage of AAPI residents.
+				</figcaption>
+			</figure>
+
+			<p>
+				Based on this graph, Chinatown, Allston and Fenway appear as the three neighborhoods with the largest AAPI populations. AAPI residents make up approximately 25% of the total population in both Allston and Fenway,
+				while taking up more than 60% in Chinatown. Next, let's take a look at how these neighborhoods compare to others in terms of corporate ownership and owner occupancy rates in 2024.
+			</p>
+
+			<figure>
+				<img src="graphs/15.png" alt="" />
+				<figcaption>
+				This bar graph shows corporate ownership rates across Boston neighborhoods in 2024, ranked from highest to lowest. The three neighborhoods with the largest AAPI population are highlighted in blue.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="graphs/16.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					This bar graph shows owner occupancy rates across Boston neighborhoods in 2024, ranked from highest to lowest. The three neighborhoods with the largest AAPI population are highlighted in blue.
 				</figcaption>
 			</figure>
 
+			<p>
+				As of 2024, all three neighborhoods are ranked in top five for corporate ownership rate and in bottom six for owner occupancy rate. This indicates that most housing in these neighborhoods are owned by corporates, leaving a significant proportion of residents as renters.
+				Referring back to Figure 11. that shows owner occcupancy rates in 2020, we see that Allston and Fenway already fell on the lower side in terms of owner occupancy. Chinatown, on the other hand, stayed relatively high in owner occupancy rate in 2020. However, this changed by 2024, 
+				suggesting a significant shift in housing dynamics between 2020 and 2024. To better understand these trends, we examine the changes in corporate ownership and owner occupancy rates over time in these neighborhoods.
+			</p>
+
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="graphs/17.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This line chart shows trends in corporate ownership rates (green) and owner occupancy rates (orange) in Fenway, Allston and Chinatown. Neighborhoods are sorted in chronological order
+				based on when their corporate ownership rate surpassed owner occupancy rate.
 				</figcaption>
 			</figure>
 
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
+			<p>
+				Among these neighborhoods, Fenway started out with the lowest owner occupancy rate and was the first to see its corporate ownership rate surpass its owner occupancy rate as early as in 2015.
+				Allston experienced this shift in 2020 which is the beginning of COVID-19 pandemic. This timing suggests that the pandemic may have exacerbated the housing burden for Allston residents, including its AAPI population. 
+				However, without eviction data, we cannot definitely conclude the exact kinds of housing instability challenges faced by Allston residents and AAPI. Lastly, Chinatown's corporate ownership rate surpassed its owner
+				occcupancy rate in late 2023, despite maintaining a rather high occupancy rate for many years before. This shift might be particularly significantly for a neighborhood that had a high owner occupancy rate historically. 
+			</p>
 
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
+			<p>
+				The trends in all three neighborhoods suggest that increasing corporate ownership is contributing to housing instability for AAPI residents in Boston. As corporate ownership continues to rise and owner occupancy continues to decline,
+				more AAPI individuals and families may face challenges related to housing affordability and instability.
+			</p>
 		</section>
 
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>
+				In Boston, corporate ownership rates have increased significantly since 2004, with a steeper rise recently starting in 2019. 
+				This trend is particularly evident in neighborhoods with historically low owner occupancy rates (e.g., South Boston Waterfront, Longwood, Downtown, and Fenway), which allowed for corporate investors
+				to purchase and rent out residential properties. Greater percentage of BIPOC populations reside in neighborhoods with historically <em>high</em>
+				owner occupancy rates, which resulted in lower corporate ownership rates in those neighborhoods. However, this is not contradicting Homes for All MA's report, 
+				as BIPOC residents in high corporate ownership neighborhoods may still be more likely to face evictions than the white population. Corporate investors appear to
+				avoid neighborhoods with high proportions of institutional facilities (e.g., West Roxbury, Roslindale, and Hyde Park) and instead target areas with non-institutional group quarters like homeless shelters (e.g., South Boston Waterfront, Downtown, and Allston). This pattern
+				aligns with the observation that higher corporate ownership neighborhoods exhibits higher proportion of homeless shelters, suggesting that corporate ownership may have contributed 
+				to rising housing costs and instability for renters in the areas. In terms of race and ethnicity, Indigenous populations have very limited prescence in Boston due to historical oppression and displacement, which suggests the necessity to 
+				make sure their experience and needs are not overlooked in housing instability discussions. Lastly, neighborhoods with large Asian American and Pacific Islander (AAPI) populations, such as Chinatown, Allston, and Fenway, have
+				seen significant increases in corporate ownership rates (exacerbated after the pandemic) and corresponding declines in owner occupancy rates, despite them being historically high. This shift suggests growing housing instability for AAPI residents in Boston, especially in recent years.
+			</p>
 		</section>
 	</main>
 </body>

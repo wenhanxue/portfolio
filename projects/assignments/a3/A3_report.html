@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Critique & Redesign
+		</h1>
+
+		<p>
+			<strong>Wenhan Xue</strong> — <em>wenhanx@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Reading & Critique</h2>
+
+			<figure>
+				<img src="https://vis-society.github.io/assets/imgs/covid-spiral.png" alt="" />
+			</figure>
+
+			<p>
+				Insights about the data/visualization:
+			</p>
+
+			<ul>
+				<li>This visualization depicts the number of newly reported COVID-19 cases in the United States (shown in red) from early 2020 to
+					the start of January 2022, when the visualization was published. Based on the red trend line,
+					the earliest reported cases of COVID-19 in the U.S. appeared in March 2020, suggesting that this was when the pandemic began
+					to spread widely in the country. 
+				</li>
+				<li>
+					The visualization exhibits three distinct peaks in COVID-19 infections in the United States, 
+					each corresponding to the emergence of a new variant of the virus. in chronological order,
+					these peaks align with the spread of the original strain of the coronavirus, followed by the Delta variant, and finally
+					the Omicron variant. This pattern indicates that the introduction of these variants was a primary driver of these peaks in cases. 
+				</li>
+				<li>
+					Additionally, the visualization shows two notable troughs, both occurring between April and July of 2020 and 2021. According to
+					Dr. Shaman's opinion article, these declines in cases are likely due to higher temperatures during the summer period, which create a less favorable environment 
+					for virus transmission. Conversely, two of the peaks occurred at the beginning of 2021 and 2022 coinciding with the winter season. This pattern can be explained by 
+					increased travel and social gatherings during the winter holidays like Christmas and New Year that facilitated the spread of coronavirus.
+				</li>
+			</ul>
+
+			<p>
+				Design Critique:
+			</p>
+
+			<p>
+				What does the visualization do well?
+			</p>
+			<ul>
+				<li>
+					This visualization does a great job in its creative use of a spiral shape to depict trends as opposed to more conventional linear chart format.
+					By transforming the x-axis into a spiral, the author effectively addresses the constraints posed by the medium on which it is displayed. Given
+					that the visualization was published in an opinion article in <i> The New York Times</i>, it was most likely designed with mobile readers in mind.
+					The spiral format makes sure that the chart fits neatly on a phone screen, avoiding the need to scroll horizontally and preventing the chart from 
+					being shrunk to a smaller scale that compromises readability. Additionally, the author seamlessly incorporates direct labeling on the x-axis, marking the years 
+					as the spiral progresses, which eliminates the need for readers to constantly refer back to a legend. The arrows also helps guide
+					readers on the direction in which they should follow the trend, which is especially helpful for visualizations with time-based data. Lastly, the visualization
+					has a relatively low data-ink ratio, adhering to minimalistic design philosophy. The use of red for the trend line, gray dotted lines for the months, and black for the x-axis creates a clear visual hierarchy.
+					In particular, the dotted gray lines are an excellent design choice for representing less important details like the months, as they fade into the background and ensures
+					that they do not distract from the primary data and message of the visualization.
+				</li>
+			</ul>
+			<p>
+				Where do we see potential space for improvement and how?
+			</p>
+			<ul>
+				<li>
+					While the visualization effectively conveys the trend, it falls short in showing the precise quantities that the readers 
+					may find important. This limitation is due to an inherent trade-off of the spiral design: the x-axis is not a continuous, straight line,
+					which makes it difficult for readers to compare the magnitude of two points that are not visually aligned. For instance, readers may not immediately
+					recognize that January 2022 had more covid cases than January 2021, as these points are not positioned side by side. To address this problem, the legend could be
+					improved by (1) including more intermediate values (rather than going from 0 directly to 150k), (2) inserting discrete breaks instead of a continuous scale, and (3) color-coding
+					each value or value range to make changes in value more detectable. However, these adjustments might conflict with the author's choice of a minimalistic aesthetic and
+					low data-ink ratio. 
+				</li>
+				<li>
+					Another area for improvement is the lack of visual cues to guide the readers' attention. For example, bolding a small segment of the beginning of the x-axis 
+					could help navigate the audience to the starting point of the spiral/trend. Additionally, a larger, more centered title could better contextualize the visualization for readers. 
+					Considering that the audience is mainly general public who may not be familiar with reading charts, the absence of a clear title currently may leave some viewers confused.
+					Lastly, this visualization appeared right below the title "Here’s When We Expect Omicron to Peak" in the original article. If this is a key message the visualization
+					aims to convey, annotating <i>where</i> exactly the author expects Omicron to peak (January of 2022, as mentioned in the article) 
+					with text labels or a distinct color might make this takeaway more evident to the audience. 
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Visualization Sketches</h2>
+			<p>
+				Through critiquing Dr. Jeffrey Shaman’s visualization, I once again learned that there is no single perfect design choice or solution—each decision comes with its own set of tradeoffs.
+				My approach to generating these sketches is very much guided by this lesson learned. My goal is to explore diverse visual forms and encoding techniques, experimenting with how they represent 
+				the data and convey the intended message, thereby making more informed choices when designing my final visualization. By creating multiple different sketches, I hope to better understand the strengths and weaknesses of different design choices in the context of showcasing
+				the COVID-19 data we are given. I also aim to understand the tradeoffs involved in balancing functionality and clarity (and perhaps, aesthetics).
+			</p>
+
+      <figure>
+				<img src="graphs/2.jpg" alt="" />
+				<figcaption>
+					This chart shows the weekly average of new COVID-19 cases over time, with the x-axis transformed into a spiral to fit the data compactly.
+					The legend uses a color gradient (green to red) and incremental lengths to represent case counts, ranging from 0 to over 800k cases.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<p>
+				Purpose and Motivation
+			</p>
+			<li>
+				This sketch mostly follows the original visualization to test the effectiveness of the improvements I suggested in my critique. One of my main
+				goals is to make the actual number of COVID-19 cases more quantifiable while still making the trends over time visible. I also (re)designed this 
+				with the general public (as the main audience group) in mind and prioritized ease of understanding for those who may not have extensive experience
+				reading charts.
+			</li>
+			<p>
+				Major Features
+			</p>
+			<li>
+				I added a larger and more descriptive title to the visualization to immediately provide context for readers. I also included annotations of emergence
+				of Delta and Omicron variants, as these information might be of interest and informative to the general public.
+			</li>
+			<li>
+				I modified the original continuous scale by inserting discrete bars that vary in length and color to more precisely represent counts of cases. The bar 
+				colors used a gradient from green to red that intuitively shows severity, with green representing low number of cases and red representing high numbers.
+			</li>
+			<p>
+				What Worked Well
+			</p>
+			<li>
+				The modified bars effectively conveys the magnitude of case counts while maintaining the overall trend.
+			</li>
+			<li>
+				The annotations and title provide necessary context that makes this visualization more informative and accessible.
+			</li>
+			<p>
+				What Didn't Work Well and Future Explorations
+			</p>
+			<li>
+				Despite these improvements, the spiral shape may still cause a learning curve for the general public. I showed both the original and redesigned visualizations 
+				to my friends with varying levels of experience in social science and reading charts and they all agreed that this shape posed a learning curve on them. Therefore,
+				I will explore more conventional visual forms to improve the accessibility of the visualization, making it more engaging and less cognitively demanding for readers.
+			</li>
+			<li>
+				I am afraid that using weekly averages might <strong>downplay the actual impact of the pandemic</strong>, and plan to use weekly or monthly sums to better reflect the impact.
+			</li>
+
+
+			<figure>
+				<img src="graphs/3.jpg" alt="" />
+				<figcaption>
+					This line chart shows the monthly sums of COVID-19 cases from September 2021 to January 2022. Illustrations are included in the background of December of January cells to highlight
+					the impact of holiday gatherings during Christmas and New Year’s on the covid trends.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<p>
+				Purpose and Motivation
+			</p>
+			<li>
+				Inspired by the concept of "Chart Junk" from class lecture, I explored using illustrations and visual cues to make a visualization and its 
+				information more memorable and easy to understand for readers. I also used a much more conventional visual form of line chart. Additionally,
+				I realized as drawing the graph that a this visual form has more available space to utilize, so I provided more elaborate annotations to explain key trends and reasoning.
+			</li>
+			<p>
+				Key Features
+			</p>
+			<li>
+				I added in the background for December and January to explain for the impact of holiday gatherings (Christmas and New Year’s) on increase in COVID-19 case counts.
+			</li>
+			<li>
+				I used a line chart to make the data easier to interpret by general audience.
+			</li>
+			<li>
+				I included more detailed annotations to provide context and explanations for the trends.
+			</li>
+			<p>
+				What Worked Well
+			</p>
+			<li>
+				The use of monthly sums (instead of averages) better reflects the true impact of COVID-19.
+			</li>
+			<li>
+				The line chart format and elaborate annotations make the visualization more accessible and informative.
+			</li>
+			<li>
+				The illustrations blend rather seamlessly into the background without distracting from the data.
+			</li>
+			<p>
+				What Didn't Work Well and Future Explorations
+			</p>
+			<li>
+				The amount of space required for the illustrations greatly limits the range of data that can be represented on the graph, making it impossible to
+				include the full data from 2020 to 2022. I believe this is a significant compromise that is not worth the tradeoff.
+			</li>
+			<li>
+				I also believe that the effectiveness of "Chart Junk" depends on how well the illustrations are integrated into the overall theme and visualization.
+				Given my very limited artistic ability, this visual form may not be the best fit for me.
+			</li>
+			<li>
+				In the next sketch, I plan to continue using a title and elaborate annotations. I would like to add the number of deceased individuals to further show the impact of COVID-19 and 
+				explore another more conventional visual form that can be accessible without sacrificing a significant amount of important data.
+			</li>
+
+			<figure>
+				<img src="graphs/4.jpg" alt="" />
+				<figcaption>
+					This small multiples is a grid of line charts that shows COVID-19 trends across seasons and years. Each horizontal row represents a year (2020, 2021, 2022), 
+					and each vertical column represents a season (spring, summer, fall, winter). Gray lines indicate the number of confirmed COVID-19 cases, while red lines indicate the number of deceased individuals.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<p>
+				Purpose and Motivation
+			</p>
+			<li>
+				This sketch uses small multiples, a visual form we discussed in class, to subdivide the space and enable comparisons across multiple plots. This visual form perfectly aligns with my goals,
+				as it subdivides the data based on year and season, clearly depicting seasonal patterns and trends shown in the original visualization (and explained in the article). Given that each plot is 
+				still essentially a line chart, the introduction of new dimensions such as separation by season and deceased counts does not compromise accessibility of this visualization.
+			</li>
+			<p>
+				Key Features
+			</p>
+			<li>
+				Using small multiples, I organized the data into a grid: horizontal rows represent years (2020, 2021, 2022), and vertical columns represent seasons (spring, summer, fall, winter). I shaded the background
+				of each column with seasonal colors (e.g., pink for spring) to intuitively match people’s impressions of each season in hopes of reducing the need to refer back to labels.
+			</li>
+			<li>
+				I added deceased counts (shown in red) alongside confirmed cases (shown in gray) to provide a more comprehensive view of the pandemic’s impact.
+			</li>
+			<li>
+				I shaded the area below the lines for both confirmed cases and deceased counts to emphasize the <strong>quantitative impact</strong> of the data, rather than just showing trends.
+			</li>
+			<p>
+				What Worked Well
+			</p>
+			<li>
+				The small multiples format effectively subdivides the data into more manageable chunks that are easier to compare patterns and trends across years and seasons.
+			</li>
+			<li>
+				The choice of line chart and seasonal color makes the data more intuitive and accessible. 
+			</li>
+			<li>
+				I also liked including the data of deceased counts and shading the area below each line to further represent the pandemic's impact
+			</li>
+			<li>
+				The title and elaborate annotations are still effective as seen in the previous sketch.
+			</li>
+			<p>
+				What Didn’t Work Well and Future Explorations
+			</p>
+			<li>
+				Due to the size limitation of my sketch paper, each individual chart is quite small, making it difficult to see the trends and fluctuations in detail.
+			</li>
+			<li>
+				Another problem lies in the difference in scales of positive case counts and deceased counts, as the latter is much smaller than the former, causing the red lines
+				to appear almost flat and underrepresenting the impact of deaths. This is a critical issue that needs to be addressed in the final visualization.
+			</li>
+			<li>
+				Additionally, for the final visualization, I plan on maintaining the title and elaborate annotations to provide clear context and explanations, continuing using 
+				sums instead of averages to better reflect the pandemic’s scale, and increasing the size of each chart to make sure more nuances in data are displayed.
+			</li>
+		</section>
+
+		<section>
+			<h2>Final Visualization Design</h2>
+      
+			<figure>
+				<img src="graphs/1.png" alt="" />
+				<figcaption>
+					This grid of charts displays monthly trends of COVID-19 cases and deaths in the United States across three years. The chart is subdivided by year (2020, 2021, 2022), with the x-axis showing months and the y-axis showing counts. 
+					Purple lines indicate monthly new confirmed cases, while orange lines represent monthly new deaths. To highlight the details of deaths, a zoomed-in version of the deceased counts is included below the main grid. 
+					The background is color-coded to indicate the periods when the original strain (green), Delta variant (pink), and Omicron variant (blue) emerged.
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+        		There are three major components to the story I am telling in this visualization: (1) The ebb and flow of, as well as the <em>actual</em> impact of pandemic across different phases by depicting the trends for cases and deaths;
+				(2) the influence of the major variants (the original strain, Delta, and Omicron) on the trends for cases and deaths, given that Dr. Shaman expected Omicron to be more infectious but less fatal in the article; and (3) the recurring
+				seasonal trends, such as decreased virus transmission during summer months (due to higher temperatures) and peaks during winter (due to holiday gatherings and subsequent delays in reporting positive cases).
+      		</p>
+			<p>
+				The visualization uses a small multiples format, with each column representing a single year (2020, 2021, 2022) aligned horizontally. This design allows readers to see the entire trend of the pandemic while also comparing trends within each year and across years.
+				The grid is segmented by the emergence of major variants, with distinct background colors (green for the original strain, pink for Delta, and blue for Omicron) indicating the periods during which each variant was dominant. 
+				These segments are also labeled along the x-axis using the same color scheme to provide redundant coding. 
+			</p>
+			<p>
+				Two neutral yet contrasting colors were chosen: purple for monthly new confirmed cases and orange for monthly new deaths. These color choices were carefully considered to ensure accessibility for individuals with colorblindness. 
+				To address the significant disparity in scale between cases and deaths, a zoomed-in version of the grid is included specifically for deaths. This zoomed-in version maintains the same orange color encoding and configuration as the main grid 
+				to ensure consistency and minimize the risk of misreading. Additionally, a to-scale representation of the zoomed-in version's y-axis is placed next to the main grid’s y-axis, to serve as an indication of differing scales in hopes of avoiding misreading.
+			</p>
+			<p>
+				The dataset used for this visualization reports daily counts of new confirmed cases and deaths from January 2020 to December 2022. However, due to the negative numbers in December 2022 (which, according to metadata, account for overcounting from prior days), it is not included in the visualization.
+				The daily counts were aggregated into monthly sums for each year.
+			</p>
+			<p>
+				To make the visualization easier to understand, the visualization includes detailed annotations that explain seasonal patterns, trends, and significant milestones in pandemic, such as the first reported case, the release of COVID-19 vaccines, and comparisons of deaths during the Delta and Omicron waves. 
+				These annotations provide informative context and make the visualization more accessible to a general audience. The title offers immediate context, and a concise summary beneath it serves as a TL;DR, summarizing the main takeaways for readers who may lack experience in interpreting complex graphs.
+			</p>
+			<p>
+				While the zoomed-in grid for deaths effectively addresses the issue of difference in scale and allows more nuances to be shown, it adds complexity to the visualization. 
+				Although a to-scale representation of the zoomed-in y-axis is added in attempts to mitigate the risk of misreading, it does not entirely eliminate this possibility.
+			</p>
+			<p>
+				Reflecting retrospectively, the TL;DR section could also be refined to more accurately convey the main takeaways. 
+				For instance, explicitly stating the total number of deaths as a key takeaway in the TL;DR would emphasize the pandemic’s profound impact on communities in the U.S. and potentially reduce the likelihood of misinterpretation. 
+				The decreased percentage of deaths among vaccinated individuals is added to avoid downplaying the number of deaths caused by covid when highlighting that death rate caused by Omicron is less than that caused by Delta (kindly pointed out by the TA Zoe :)).
+			</p>
+
+      <h3>Reflection</h3>
+
+      <p>
+        The "critique by redesign process" definitely helped me with identifying challenges of communicating this data. It also allowed me to explore different types of visual forms and encoding techniques to
+		learn about the strengths and weaknesses, as well as the tradeoffs in each one in the context of this dataset. This provided me opportunity to think about which ones to use to balance between effectively 
+		communicating my data and message and the clarity and accessibility of the visualization. I also have more in-depth understanding and thoughts on the data itself and carefully chose which data I would like to 
+		include and how I wanted to transform it as a result of this redesign process.
+      </p>
+	  <p>
+		For instance, I deviated from the weekly averaged used in the original visualization to monthly sums in hopes of more concretely plotting out the impact of COVID-19. I also decided to put more weight on the 
+		accessibility and readability of my final visualization considerring that the major audience is general public with varying levels of experience in reading charts. As a result, I moved from spiral shape (which better fits a mobile screen)
+		to more conventional and common line charts. There are also successes in my sketches, such as the inclusion of titles and more elaborate annotations to add context and more informative explanations to my visualization 
+		for the general audience. Those I found them particularly effective in my sketches, and I continued on using them in my final design. 
+	  </p>
+		</section>
+
+		<section>
+			<h3>References</h3>
+			<ul>
+				<li>
+					<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9028683/#:~:text=7)%2C%20and%20by%20June%202021,%2DJune%2C%20with%20the%20B.">Delta variant start date (NIH)</a> 
+				</li>
+				<li>
+					<a href="https://www.cdc.gov/mmwr/volumes/70/wr/mm7050e1.htm">Omicron variant start date (CDC)</a>
+				</li>
+				<li>
+					<a href="https://www.cdc.gov/museum/timeline/covid19.html#:~:text=CDC%20reports%20the%20first%20laboratory,respond%20to%20the%20emerging%20outbreak.">First covid case in the U.S. (CDC)</a>
+				</li>
+				<li>
+					<a href="https://ourworldindata.org/covid-deaths-by-vaccination">Decrease in covid death rate (Our World in Data, based on CDC provided data)</a>
+				</li>
+				<li>
+					<a href="https://www.supremecourt.gov/opinions/urls_cited/ot2021/21a90/21a90-1.pdf">First covid vaccine release date (Wall Street Journal/Supreme Court)</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+</body>
+</html>

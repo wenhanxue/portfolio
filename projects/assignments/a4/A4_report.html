@@ -19,15 +19,34 @@
 	</header>
 
 	<main>
-    <h2>Proposition: [STATE PROPOSITION]</h2>
+    <h2>Proposition: In the NYPD, White police officers are disproportionately accused of misconduct by civilians, with a vast
+		majority of complaints being Black and Hispanic. This raises questions of potential racial disparities in policing practices.
+	</h2>
 
 		<section>
       <h3>FOR the Proposition</h3>
 
-      <figure>
-				<img src="graphs/1.png" alt="" />
+      	<figure>
+				<img src="graphs/4.png" alt="" />
 				<figcaption>
-					BRIEF CAPTION HERE.
+					This infographic titled <i>"Inverse Injustice: Overpolicing Minorities, Delayed Justice, & Unequal Complaint Outcomes"</i> 
+					analyzes <strong>33,358 civilian complaints against NYPD officers from 1985 to 2020</strong>, using <a href="https://projects.propublica.org/datastore/#civilian-complaints-against-new-york-city-police-officers">data sourced from ProPublica</a>. 
+					It features three key visualizations:
+					<ol>
+						<li>
+							A bar graph comparing racial and ethnical distribution of police officers accused and civilian plaintiffs. The data reveals that White officers are disproportionately accused of misconduct, 
+							while Black and Hispanic civilians disproportionately file complaints.
+						</li>
+						<li>
+							A column graph showing the longest complaint resolution times (in days) for White and Black civilians, which shows that complaints filed by Black civilians can take up to three times longer 
+							to resolve than those filed by White civilians.
+						</li>
+						<li>
+							A combined column graph comparing the outcomes of complaints filed by White civilians versus Black/Hispanic civilians, indicating that complaints filed by White civilians are more likely to 
+							result in a guilty finding, while complaints filed by Black/Hispanic civilians are more likely to be dismissed or cleared.
+						</li>
+					</ol>
+					Together, these visualizations suggest <strong>potential racial biases in policing practices of and complaint resolution</strong> in the NYPD.
 				</figcaption>
 			</figure>
 
@@ -35,38 +54,216 @@
 				Design Decisions and Rationale:
 			</p>
 
-			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
-			</ul>
+			<ol>
+				<li>
+					<strong>Design Decision:</strong><p>
+						The use of infographic title and subheadings that take a stance (rather than being neutral), along with annotations that provide additional 
+						context and explanations of the data for the general public.
+					</p>
+					<strong>Earnestness Score:</strong><p>
+						1.5. I consider this design decision to be totally earnest in this scenario, given that it presents factual data ethically. However,
+						I can see how non-neutral titles and subheadings can be used manipulatively in other contexts to skew viewer's perspective. 
+					</p>
+					<strong>Rationale:</strong><p>
+						Titles and subheadings serve as effective overviews to begin with, helping viewers quickly grasp the main points of the visualization. Additionally,
+						by taking a stance, the title and subheadings prime the audience to interpret this infographic based on the perspective I propose, guiding them to 
+						favor my side of the argument. I debated between using neutral headings and taking a stance for my visualization, and eventually decided on the latter
+						as it is more effective for audience to grasp the key takeaways, and more persuasive for the purpose of this assignment.
+					</p>
+				</li>
+				<li>
+					<strong>Design Decision:</strong><p>
+						For the column graph of <i>Longest Complaint Resolution Time (Days)</i>, I transformed the dataset variables (<code>month_received</code>, <code>year_received</code>, <code>month_closed</code>, <code>year_closed</code>) 
+						into the duration of complaints in days. This was done to investigate whether complaints filed by Black and Hispanic civilians take longer to resolve, as my initial exploratory data analysis (EDA) suggested that Black 
+						and Hispanic civilians file more complaints of police misconduct. However, I intentionally excluded this data for Hispanic complainants because their longest resolution time (1246 days) was only slightly longer than 
+						that of White complainants, which I felt would weaken my proposition in this visualization. Lastly, to emphasize the disparity in duration, I visually compared the longest complaint duration for Black complainants to 
+						that of White complainants by stacking dotted-line boxes representing the duration of the longest White complaint on top of its own bar.
+					</p>
+					<strong>Earnestness Score:</strong><p>
+						1.5. I consider this design decision to be mostly earnest except for the part where I left out the longest duration for Hispanic complainants. I don't think not fully presenting the data is inherently problematic, especially given that
+						the subheading of this graph specifically says <i>"<strong>Black</strong> Complainants Wait 3x Longer"</i> rather than generalizing to <strong>Black and Hispanic</strong> or <strong>BIPOC</strong> complainants. However, I do think that since I am talking about Black and Hispanic communities
+						collectively in other sections of my infographic, I could have expanded on the nuance here to highlight Black individuals face even more severe discrimination than Hispanic individuals in terms of complaint resolution (and policing practice, too, as
+						we see in the first horizontal bar graph).
+					</p>
+					<strong>Rationale:</strong><p>
+						I chose to measure the duration in days rather than larger units (e.g., weeks or months) to capture subtle nuances in racial differences and to emphasize the disparities with more striking numbers. I also think that the use of the dotted boxes
+						further enhances my visualization by making the disparity visually intuitive and quantifiable. As mentioned earlier, I intentionally excluded the longest duration for Hispanic complainants because their resolution time is only slightly longer (by less than 200 days) than that of White
+						complainants, which may undermine my argument in this visualization that Black and Hispanic individuals face more discrimination in policing practices. However, going off of my reflection about the earnestness of this design choice, I recognize that
+						talking about Black and Hispanic communities collectively has made including Hispanic complainants duration more negatively impactful. I could have avoided excluding this piece of data by further acknowledging the nuanced disparities <i>within</i> the BIPOC community
+						throughout my visualization.
+					</p>
+				</li>
+				<li>
+					<strong>Design Decision:</strong><p>
+						I included key details about the dataset, such as the total number of complaints (33,358), the time span (1985–2020), the source (ProPublica), and a direct link to the dataset.
+					</p>
+					<strong>Earnestness Score:</strong><p>
+						2. I consider this design decision to be fully earnest as it is solely stating factual information about the dataset.
+					</p>
+					<strong>Rationale:</strong><p>
+						Including these details enhances the transparency, credibility, and persuasiveness of my visualization. 
+						The large number of complaints (33,358) makes the dataset and its results more generalizable and reliable. Similarly, the expansive time span (1985–2020) ensures a long-term consistency in patterns as opposed to patterns that only appear for a short
+						period of time due to temporary events. Citing the source, especially as ProPublica is an independent organization not affiliated with the government or the NYPD, adds to the credibility of the data presented as there is less likelihood of biased or skewed data.
+						Lastly, providing a direct link to the dataset allows readers to explore the raw data themselves, verify my visualizations, and engage more deeply with the analysis. One thing that I just thought of as I am writing this rationale is that I am not sure 
+						if my word choice of <i>"Access here."</i> is accessible to screen reader users. I remember from an html class that I took that we are supposed to make the texts of our links more descriptive and informative. I ran out of time for this assignment to fix this issue,
+						but I will definitely keep this in mind for the final project.
+					</p>
+				</li>
+			</ol>
     </section>
 
     <section>
       <h3>AGAINST the Proposition</h3>
 
       <figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="graphs/7.png" alt="" />
 				<figcaption>
-          BRIEF CAPTION HERE.
+					This infographic titled <i>"Civilian Allegations Against NYPD Reveal Unique and Surprising Racial Dynamics in NYC"</i> 
+					analyzes <strong>33,358 civilian complaints against NYPD officers from 1985 to 2020</strong>, using <a href="https://projects.propublica.org/datastore/#civilian-complaints-against-new-york-city-police-officers">data sourced from ProPublica</a>. 
+					It features three key visualizations:
+					<ol>
+						<li>
+							A bar graph showing the racial and ethnic composition of NYPD officers. The data reveals that White officers are the majority, followed by Hispanic and Black officers.
+						</li>
+						<li>
+							A column graph showing civilians accused officers by race or ethnicity, which indicates that White officers rank third, behind Black and Hispanic officers.
+						</li>
+						<li>
+							A column graph that shows the racial/ethnic distribution of civilian plaintiffs, suggesting that Black and Hispanic civilians file significantly more complaints than other racial/ethnic groups.
+						</li>
+					</ol>
 				</figcaption>
 			</figure>
 
 			<p>
 				Design Decisions and Rationale:
 			</p>
+			<p>
+				Before diving into my specific design choices and rationale, I would like to acknowledge that I had an extremely hard time coming up with a visualization that argues <i>against</i> my proposition. 
+				This primarily stems from the fact that my proposition is grounded in the realities of police violence and systemic racial injustice in the U.S. (Whereas a proposition I could form using other datasets for this assignment,
+				e.g., <i>"The U.S. invests 2x more in environment protection than Canada does"</i> feels less persnally significant.) However, I also found this assignment to be meaningful especially with my proposition, as it pushes me 
+				to consider the power of data visualization and the ethical implications when it is used in misleading ways. On a lighter note, I found it fun and challenging to stretch my brain and think creatively about how to present 
+				the data in a way that challenges my proposition. I definitely experienced my big brain moment when I thought of that superscript 2 trick (which I will explain more in detail below!):)
+			</p>
 
-			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
-			</ul>
+			<ol>
+				<li>
+					<strong>Design Decision:</strong><p>
+						Similar to my previous visualization, I used infographic title and subheadings that take a stance rather than remaining neutral. I also included annotations to further provide 
+						context to (mis)lead the audience towards my standpoint.
+					</p>
+					<strong>Earnestness Score:</strong><p>
+						-1.5. Again, I don't think taking a stance is inherently problematic, but here it is used a way that favors incorrect information, so I consider it to be very deceptive and misleading in this case.
+					</p>
+					<strong>Rationale:</strong><p>
+						By using titles and subheadings that take a stance, I guide the reader to view the data through the lens of my argument. 
+						In this case, the title <i>“Civilian Allegations Against NYPD Reveal Unique and Surprising Racial Dynamics in NYC”</i> uses words like “unique” and “surprising” 
+						to subtly suggest that the visualization challenges conventional perspectives on racial bias in policing against BIPOC communities. I found this design choice to be particularly important here because 
+						the graphs themselves may not be inherently persuasive or withstand close scrutiny (although I tried...), therefore, I almost immediately ruled out using neutral headings 
+						for this visualization. The headings here really provide the necessary context to steer the reader toward my intended interpretation.
+					</p>
+				</li>
+				<li>
+					<i>*I will discuss the design choices for each of the three graphs individually, though there is some overlap*</i>
+					<p><strong>Design Decision:</strong></p><p>
+						My graph titles are intentionally vague and misleading to allow for multiple interpretations of the data. 
+					</p>
+					<strong>Earnestness Score:</strong><p>
+						-2. When designing the visualization arguing against my proposition, I struggled to draw the line between <strong>depicting the data in misleading ways</strong>
+						 and <strong>presenting inherently incorrect data</strong>. Given the ethical implications of arguing against this specific proposition, I eventually erred on the 
+						 more conservative side by making subheadings and graph titles relatively short and vague and thus misleading, rather than directly stating incorrect information 
+						(e.g., <i>"This graph shows the racial distribution of <strong>all</strong> NYPD officers"</i>). However, I still consider this approach to be very deceptive because I disguised the scale
+						 as linear and truncated the x-axis, both of which severely distorted the data's representation.
+					</p>
+					<strong>Rationale:</strong><p>
+						By making my graph titles vague and leaving room for multiple interpretations--combined with my earlier design choice of  using infographic titles and subheadings that take a stance
+						--I hope to guide readers towards interpreting the data in ways that favor my argument. For the first graph, the title <i>“NYPD Officers by Race and Ethnicity”</i> could
+						 be interpreted as representing the racial/ethnical distribution of <i>all</i> NYPD officers, when in reality it only includes officers who have been accused of misconduct. 
+						Then, to minimize the perceived differences in numbers between racial groups, I used a logarithmic scale instead of a linear one, and covered the tick labels except for the minimum and maximum
+						 endpoints, making it unclear which type of scale was used. Since my previous infographic used linear scales (the more commonly used type), readers might assume this graph also uses a linear scale. 
+						 This choice makes the representation of minority officers appear larger than it actually is. Additionally, I truncated the x-axis at 10,000, even though the actual maximum value for White officers is 18,074. 
+						 By setting the maximum at 10,000, I created the illusion that the total number of officers across all racial groups roughly adds up to 33,358 (the total number of complaints), which is misleading but effective in downplaying
+						 racial disparitis to support my argument.
+					</p>
+				</li>
+				<li>
+					<strong>Design Decision:</strong><p>
+						I will discuss the second and third graphs together, as they are intentionally placed side by side to create a misleading narrative. 
+						For both graphs, I used vague subheadings and titles, misleading annotations, and a deceptive superscript design to (mis)guide the reader’s interpretation.
+					</p>
+					<strong>Earnestness Score:</strong><p>
+						-2. None of the design choices I made for graph 2 and 3 are healthy or beneficial in any ways. You can see more detailed explanation for my 
+						design rationale below but I consider them to be fully deceptive.
+					</p>
+					<strong>Rationale:</strong><p>
+						Starting with the graph title of graph 2, I intentionally wrote it in a similar format as graph 1's title to make the readers think they are sequential. 
+						Since the title for graph 1 is <i>"NYPD Officers by Race and Ethnicity"</i> (which can be misinterpreted as representing all NYPD officers), it makes logical
+						sense for the second graph titled <i>"Civilians Alleged Officers by Race/Ethnicity"</i> to be interpreted as showing the race/ethnicity of NYPD officers <strong>who were accused</strong>. 
+						To reinforce the connection between graph 1 and 2, I added an annotation beside graph 1
+						saying <i>“Let’s take a closer look from here...”</i> with an arrow pointing to the second graph, making it seem like the second graph provides more detailed information following the first.
+					</p>
+					<p>
+						The most deceptive aspect of these graphs is the use of a <strong>superscript 2</strong> in both the second and third graphs. The second graph uses a logarithmic scale from 0 to 10,000 (which is 100 squared!), 
+						while the third graph uses a linear scale from 0 to 100%. The superscript 2 in the second graph is in a sans-serif font, while the superscript in the third graph is in a serif font, matching the footnote style. 
+						This design choice misleads readers into thinking both graphs use percentages, especially since they are placed side by side with the exact same y-axes.
+					</p>
+					<p>
+						The third graph is actually the <i>correct</i> version of the data that the second graph is trying to represent, displaying the same information as the second graph but in a linear scale and percentages.
+						 The actual interpretation for the second graph's title is the racial/ethnical distribution of <strong>civilians that allged officers</strong> (instead of the other way around), but since 
+						this is what graph 3 is representing, with its (intentionally) less vague title stating <i>"Racial/Ethnical Distribution of Plaintiffs"</i> it makes it seem like graph 2 must represent the other, wrong
+						interpretation. I aimed to rule out the possibility of the second graph being interpreted correctly because readers would not expect the same visualization to be repeated side by side.
+					</p>
+					<p>
+						Finally, I worded the subheading for the second graph (<i>"White is only ranked 3rd, less than Black and Hispanic"</i>) to further mislead the reader by suggesting that, despite White officers being the majority, a higher <strong>percentage</strong> of Black and Hispanic officers are accused. 
+						In reality, the graph shows the race/ethnicity of civilians who filed complaints, not the officers accused. <strong>However, I avoided leaving any text or annotation that interprets any of these three distorted, truncated and misleading graphs
+						in ways that I explained in my design rationale due to ethical concerns, though I believe including them can definitely elevate the persuasiveness of my visualization.</strong>
+					</p>
+				</li>
+				<li>
+					<strong>Design Decision <small>(a super minor one)</small>:</strong><p>
+						I included a footnote citing the data source (ProPublica).
+					</p>
+					<strong>Earnest Score:</strong><p>
+						2. Although my motivation behind this design choice is not at all earnest, citing data source is inherently an earnest way to improve transparency 
+						and authenticity in data visualization. Especially in this case where my entire visualization is basically misleading and false, giving readers 
+						access to the dataset gives them the opportunity to find out all the problematic aspects with my design.
+					</p>
+					<strong>Rationale:</strong><p>
+						The only reason that I included this footnote is to create a practical context for my trick of using superscript 2 (i.e., I need a footnote 1 for there to be a footnote 2!)
+						It happens that citing the data source also brings the added benefit of enhancing transparency and credibility (I analyzed this more in detail in my design rationale for the prior visualization).
+					</p>
+				</li>
+			</ol>
     </section>
 
     <section>
       <h2>Final Reflection</h2>
 
-      <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+      <p>
+		Like I briefly talked about in my design rationale, I think this assignment is both challenging and enlightening for me. It really pushes me 
+		to utilize design techniques to increase the persuasiveness of my visualization while considering the fine line between persuasive and misleading 
+		design choices, and what the ethical implications and consequences are behind your design choices, your visualization, and the data you are addressing.
+		Creating the visualization that supports my proposition definitely felt much more straightforward, as my proposition is what the dataset factually shows.
+		All I had to think about was how to employ effective and expressive visual encodings to make my visualization more straightforward and accessible to the general public 
+		(I think my proposition and this dataset is beneficial for the public to learn about). I don't really have to ponder whether my techniques were earnest at all because
+		all the techniques I used like clear titles and headings, transparent data sourcing, and visual comparisons of the dotted-lined boxes are inherently earnest.
+		On the other hand, designing a visualization to argue against my proposition was extremely more difficult. 
+		I struggled to reconcile with the ethical implications of distorting data to support a narrative I knew to be false, and I also found it challenging 
+		to use deceptive techniques that were <strong>subtle enough to be persuasive without being blatantly dishonest</strong>.
+	  </p>
+	  <p>
+		I also felt very enlightened when asking to score my design techniques. Particularly for the visualization supporting my proposition, when I excluded the longest complaint duration 
+		for Hispanic plaintiffs, it was through writing the reflection that I realized I could have be more careful with my storytelling and draws readers' attention to racial disparity within 
+		the BIPOC communities. I also realized how certain effective design techniques can actually be used to mislead audience, which I totally didn't realize until I used 
+		the exact same technique when designing the visualization against my proposition. These findings definitely deepened my understanding of the power and responsibility that data visualization is able to carry. Now, I define "ethical analysis and visualization"
+		as presenting data in a way that is transparent and accurate, and it should give audience the autonomy to draw their own conclusions. Persuasive or effective and expressive techniques 
+		can only be used to facilitate understanding of or emphasize certain aspects of the data, but never to misrepresent or manipulate it. 
+	  </p>
+	  <p>
+		In terms of distiguishing between acceptable and misleading persuasive choices, I think the key lies in the intent (i.e., does this choice adds to or changes/distort the data and/or its representation?)
+		and transparency. I realized that citing data source is a very helpful and important practice, and it provides readers with the opportunity to engage with the raw data themselves and verify the author's analysis and findings.
+		All in all, I think it is especially important for <u>data visualization creators</u> to committed to honest and transparency. 
+	  </p>
     </section>
 	</main>
 </body>
